@@ -12,6 +12,7 @@
     overflow: hidden;
     width: 100%;
     min-height: var(--sliderHeight);
+    font-family: sans-serif;
 }
 .slides .slides__slide {
     position: absolute;
@@ -31,7 +32,13 @@
     background-color: green;
     left: 200%;
 }
-.slides .slides__box{}
+.slides .slides__box{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;git
+}
 .slides .slides__hdl {}
 .slides .slides__lead {}
 .slides .slides__link {}
