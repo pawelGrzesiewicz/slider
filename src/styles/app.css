@@ -1,5 +1,5 @@
 :root {
-    --sliderHeight: 200px
+    --sliderHeight: 300px
 }
 
 @font-face {
@@ -16,25 +16,27 @@
     src: url('../fonts/roboto-light-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-
 }
 
-.slider {
-    background-color: red;
-}
-
-.slider .slider__slides {
-}
-
-.slider .slider__nav {
-}
-
-.slides {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    min-height: var(--sliderHeight);
-    font-family: sans-serif;
+@keyframes slide-1 {
+    0% {
+        left: 200%;
+    }
+    20% {
+        left: 200%;
+    }
+    40% {
+        left: 100%;
+    }
+    60% {
+        left: 100%;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 @keyframes slide-2 {
@@ -79,25 +81,22 @@
     }
 }
 
-@keyframes slide-1 {
-    0% {
-        left: 200%;
-    }
-    20% {
-        left: 200%;
-    }
-    40% {
-        left: 100%;
-    }
-    60% {
-        left: 100%;
-    }
-    80% {
-        left: 0;
-    }
-    100% {
-        left: 0;
-    }
+.slider {
+    background-color: red;
+}
+
+.slider .slider__slides {
+}
+
+.slider .slider__nav {
+}
+
+.slides {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: var(--sliderHeight);
+    font-family: sans-serif;
 }
 
 .slides .slides__slide {
@@ -106,7 +105,7 @@
     top: 0;
     min-height: var(--sliderHeight);
     animation-duration: 10s;
-    /*animation-direction: alternate;*/
+    animation-direction: alternate;
     animation-iteration-count: infinite;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,10 +159,39 @@
 }
 
 .slider-nav {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 .slider-nav .slider-nav__btn {
+    margin: 20px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background: url('../icons/icons8-next-50.png') no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    text-indent: -999px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    opacity: .5;
+    transition: all 400ms ease-in-out;
 }
 
 .slider-nav .slider-nav__btn.slider-nav__btn--prev {
+    position: absolute;
+    right: 0;
+    transform: rotate(0);
+}
+
+.slider-nav .slider-nav__btn:hover {
+    opacity: 1;
+    transform: scale(2) rotate(180deg);
+}
+
+.slider-nav .slider-nav__btn.slider-nav__btn--prev:hover {
+    transform: scale(2) rotate(0);
 }
