@@ -20,31 +20,67 @@
     font-family: sans-serif;
 }
 
-@keyframes slide-2{
-    0% {left: 0;}
-    20% {left: 0;}
-    40% {left: -100%;}
-    60% {left: -100%;}
-    80% {left: -200%;}
-    100% {left: -200%;}
+@keyframes slide-2 {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    40% {
+        left: -100%;
+    }
+    60% {
+        left: -100%;
+    }
+    80% {
+        left: -200%;
+    }
+    100% {
+        left: -200%;
+    }
 }
 
-@keyframes slide-3{
-    0% {left: 100%;}
-    20% {left: 100%;}
-    40% {left: 0%;}
-    60% {left: 0%;}
-    80% {left: -100%;}
-    100% {left: -100%;}
+@keyframes slide-3 {
+    0% {
+        left: 100%;
+    }
+    20% {
+        left: 100%;
+    }
+    40% {
+        left: 0;
+    }
+    60% {
+        left: 0;
+    }
+    80% {
+        left: -100%;
+    }
+    100% {
+        left: -100%;
+    }
 }
 
-@keyframes slide-1{
-    0% {left: 200%;}
-    20% {left: 200%;}
-    40% {left: 100%;}
-    60% {left: 100%;}
-    80% {left: 0%;}
-    100% {left: 0%;}
+@keyframes slide-1 {
+    0% {
+        left: 200%;
+    }
+    20% {
+        left: 200%;
+    }
+    40% {
+        left: 100%;
+    }
+    60% {
+        left: 100%;
+    }
+    80% {
+        left: 0;
+    }
+    100% {
+        left: 0;
+    }
 }
 
 .slides .slides__slide {
@@ -58,19 +94,19 @@
 }
 
 .slides .slides__slide:first-child {
-    background-color: gold;
+    background-image: url("../pictures/slide-1.jpeg");
     left: 0;
     animation-name: slide-1;
 }
 
 .slides .slides__slide:nth-child(2) {
-    background-color: yellow;
+    background-image: url("../pictures/slide-2.jpeg");
     left: 100%;
     animation-name: slide-2;
 }
 
 .slides .slides__slide:last-child {
-    background-color: green;
+    background-image: url("../pictures/slide-3.jpeg");
     left: 200%;
     animation-name: slide-3;
 }
