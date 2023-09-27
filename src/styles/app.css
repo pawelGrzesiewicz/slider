@@ -1,11 +1,16 @@
 :root {
     --sliderHeight: 200px
 }
+
 .slider {
     background-color: red;
 }
-.slider .slider__slides {}
-.slider .slider__nav {}
+
+.slider .slider__slides {
+}
+
+.slider .slider__nav {
+}
 
 .slides {
     position: relative;
@@ -14,35 +19,84 @@
     min-height: var(--sliderHeight);
     font-family: sans-serif;
 }
+
+@keyframes slide-2{
+    0% {left: 0;}
+    20% {left: 0;}
+    40% {left: -100%;}
+    60% {left: -100%;}
+    80% {left: -200%;}
+    100% {left: -200%;}
+}
+
+@keyframes slide-3{
+    0% {left: 100%;}
+    20% {left: 100%;}
+    40% {left: 0%;}
+    60% {left: 0%;}
+    80% {left: -100%;}
+    100% {left: -100%;}
+}
+
+@keyframes slide-1{
+    0% {left: 200%;}
+    20% {left: 200%;}
+    40% {left: 100%;}
+    60% {left: 100%;}
+    80% {left: 0%;}
+    100% {left: 0%;}
+}
+
 .slides .slides__slide {
     position: absolute;
     width: 100%;
     top: 0;
     min-height: var(--sliderHeight);
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
+
 .slides .slides__slide:first-child {
     background-color: gold;
     left: 0;
+    animation-name: slide-1;
 }
+
 .slides .slides__slide:nth-child(2) {
     background-color: yellow;
     left: 100%;
+    animation-name: slide-2;
 }
+
 .slides .slides__slide:last-child {
     background-color: green;
     left: 200%;
+    animation-name: slide-3;
 }
-.slides .slides__box{
+
+.slides .slides__box {
     padding: 10px;
     background-color: rgba(0, 0, 0, .7);
     position: absolute;
     width: 100%;
     box-sizing: border-box;
 }
-.slides .slides__hdl {}
-.slides .slides__lead {}
-.slides .slides__link {}
 
-.slider-nav {}
-.slider-nav .slider-nav__btn {}
-.slider-nav .slider-nav__btn.slider-nav__btn--prev {}
+.slides .slides__hdl {
+}
+
+.slides .slides__lead {
+}
+
+.slides .slides__link {
+}
+
+.slider-nav {
+}
+
+.slider-nav .slider-nav__btn {
+}
+
+.slider-nav .slider-nav__btn.slider-nav__btn--prev {
+}
